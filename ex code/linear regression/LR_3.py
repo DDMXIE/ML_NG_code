@@ -76,7 +76,10 @@ if __name__ == '__main__':
     print(theta_0_optimize + theta_1_optimize * Size + theta_2_optimize * Bedrooms)
 
     # 数据显示
-    plt.plot(X1, (theta_0_optimize + theta_1_optimize * X1 + theta_2_optimize * X2), color='r')
+    x = np.linspace(-3, 3, num=100)
+    x2 = np.linspace(-3, 3, num=100)
+    plt.plot(x, (theta_0_optimize + theta_1_optimize * x + theta_2_optimize * x2), color='r')
+    # plt.plot(X1, (theta_0_optimize + theta_1_optimize * X1 + theta_2_optimize * X2), color='r')
     plt.scatter(x=X1, y=y, s=5)
     plt.scatter(x=X2, y=y, s=5)
     plt.show()
